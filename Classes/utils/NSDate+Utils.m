@@ -6,6 +6,11 @@
 
 @implementation NSDate (Utils)
 
++ (NSDate*)today {
+    return [[NSDate date] dayStart];
+}
+
+
 - (BOOL)isAfter:(NSDate*)other {
 	return [self compare:other] == NSOrderedDescending;
 }

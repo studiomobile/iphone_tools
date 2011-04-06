@@ -6,6 +6,8 @@
 
 @interface NSDate (Utils) 
 
++ (NSDate*)today;
+
 - (BOOL)isAfter:(NSDate*)other;
 - (BOOL)isBefore:(NSDate*)other;
 
