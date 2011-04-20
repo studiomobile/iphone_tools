@@ -8,5 +8,7 @@
 
 + (id)loadFromNIB;
 + (id)loadFromNIBWithOwner:(id)owner;
++ (id)loadFromNIB:(NSString*)nibName;
++ (id)loadFromNIB:(NSString*)nibName owner:(id)owner;
 
 @end
