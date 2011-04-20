@@ -7,5 +7,6 @@
 @interface UIView (NIB)
 
 + (id)loadFromNIB;
++ (id)loadFromNIBWithOwner:(id)owner;
 
 @end
