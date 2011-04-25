@@ -54,6 +54,8 @@
 		DA319C28130E8D4200103EF6 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319C21130E8D4200103EF6 /* unzip.h */; };
 		DA319C29130E8D4200103EF6 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = DA319C22130E8D4200103EF6 /* zip.c */; };
 		DA319C2A130E8D4200103EF6 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319C23130E8D4200103EF6 /* zip.h */; };
+		DA799A561365A4AC005DE5D1 /* NSObject+AssociatedObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = DA799A541365A4AC005DE5D1 /* NSObject+AssociatedObjects.h */; };
+		DA799A571365A4AC005DE5D1 /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = DA799A551365A4AC005DE5D1 /* NSObject+AssociatedObjects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,8 @@
 		DA319C21130E8D4200103EF6 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
 		DA319C22130E8D4200103EF6 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
 		DA319C23130E8D4200103EF6 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		DA799A541365A4AC005DE5D1 /* NSObject+AssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObjects.h"; sourceTree = "<group>"; };
+		DA799A551365A4AC005DE5D1 /* NSObject+AssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObjects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 				DA319BE0130E8D2900103EF6 /* NSDate+Utils.m */,
 				DA319BE1130E8D2900103EF6 /* NSInvocation+Utils.h */,
 				DA319BE2130E8D2900103EF6 /* NSInvocation+Utils.m */,
+				DA799A541365A4AC005DE5D1 /* NSObject+AssociatedObjects.h */,
+				DA799A551365A4AC005DE5D1 /* NSObject+AssociatedObjects.m */,
 				DA319BE3130E8D2900103EF6 /* NSObject+Invocation.h */,
 				DA319BE4130E8D2900103EF6 /* NSObject+Invocation.m */,
 				DA319BE5130E8D2900103EF6 /* UIAlertView+Utils.h */,
@@ -286,6 +292,7 @@
 				DA319C26130E8D4200103EF6 /* ioapi.h in Headers */,
 				DA319C28130E8D4200103EF6 /* unzip.h in Headers */,
 				DA319C2A130E8D4200103EF6 /* zip.h in Headers */,
+				DA799A561365A4AC005DE5D1 /* NSObject+AssociatedObjects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +367,7 @@
 				DA319C25130E8D4200103EF6 /* ioapi.c in Sources */,
 				DA319C27130E8D4200103EF6 /* unzip.c in Sources */,
 				DA319C29130E8D4200103EF6 /* zip.c in Sources */,
+				DA799A571365A4AC005DE5D1 /* NSObject+AssociatedObjects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
