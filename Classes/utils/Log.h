@@ -3,10 +3,9 @@
 //
 
 #ifdef DEBUG_LOG
-    #define DEBUG(s) NSLog(s);
-    #define DEBUGF(f, ...) NSLog(f, __VA_ARGS__);
+    #define DEBUG(f, ...) NSLog(f, ##__VA_ARGS__)
 #else
-    #define DEBUG(s) 
-    #define DEBUGF(f, ...) 
+    #define DEBUG(f, ...) 
 #endif
+
 
