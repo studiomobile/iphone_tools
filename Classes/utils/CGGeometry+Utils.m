@@ -31,7 +31,7 @@ CGSize CGSizeFitIntoSize(CGSize original, CGSize fitInto){
 
 
 CGPoint CGRectCenter(CGRect r){
-	return CGPointMake(CGRectGetMidX(r), CGRectGetMidY(r));	
+	return CGPointMake(trunc(CGRectGetMidX(r)), trunc(CGRectGetMidY(r)));	
 }
 
 
