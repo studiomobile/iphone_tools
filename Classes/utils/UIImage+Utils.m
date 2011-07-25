@@ -5,6 +5,9 @@
 #import "UIImage+Utils.h"
 #import "CGGeometry+Utils.h"
 
+CGContextRef BeginBitmapContextWithSize(CGSize size);
+UIImage* EndBitmapContext(void);
+
 CGContextRef BeginBitmapContextWithSize(CGSize size) {
 	UIGraphicsBeginImageContext(size);
 	return UIGraphicsGetCurrentContext();
