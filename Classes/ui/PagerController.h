@@ -31,8 +31,8 @@
     NSUInteger maxLoadedPage;
     BOOL animating;
 }
-@property (nonatomic, assign) id<PagerControllerDelegate> delegate;
-@property (nonatomic, assign) id<PagerControllerDataSource> dataSource;
+@property (nonatomic, assign) IBOutlet id<PagerControllerDelegate> delegate;
+@property (nonatomic, assign) IBOutlet id<PagerControllerDataSource> dataSource;
 @property (nonatomic, readonly) NSUInteger currentPage;
 @property (nonatomic, assign) NSUInteger loadMargin;
 @property (nonatomic, assign) BOOL pagingEnabled;
