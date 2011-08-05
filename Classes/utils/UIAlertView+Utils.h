@@ -7,9 +7,11 @@
 @interface UIAlertView (Utils)
 
 + (UIAlertView*)alertViewWithErrorMessage:(NSString*)message;
++ (UIAlertView*)alertViewWithErrorMessage:(NSString*)message delegate:(id)delegate;
 + (UIAlertView*)alertViewWithMessage: (NSString*)message;
 + (UIAlertView*)alertViewWithTitle:(NSString*)title;
 + (UIAlertView*)alertViewWithTitle:(NSString*)title message:(NSString*)message;
++ (UIAlertView*)alertViewWithTitle:(NSString*)title message:(NSString*)message buttonName:(NSString*)buttonName;
 + (UIAlertView*)yesNoAlertViewWithTitle:(NSString*)title message:(NSString*)message;
 + (UIAlertView*)showOneButtonAlertViewWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate;
 

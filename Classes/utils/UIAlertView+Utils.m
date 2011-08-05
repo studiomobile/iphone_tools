@@ -33,23 +33,30 @@
 }
 
 
-+ (UIAlertView*)alertViewWithTitle:(NSString*)title message:(NSString*)message {
++ (UIAlertView*)alertViewWithTitle:(NSString*)title message:(NSString*)message buttonName:(NSString*)buttonName {
     UIAlertView *alert = [[[self alloc] initWithTitle:title
-                                                     message:message
-                                                    delegate:nil
-                                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                           otherButtonTitles:nil] autorelease];
+                                              message:message
+                                             delegate:nil
+                                    cancelButtonTitle:buttonName
+                                    otherButtonTitles:nil] autorelease];
 	return alert;
 }
 
 
-+ (UIAlertView*)alertViewWithErrorMessage:(NSString*)message{
-	UIAlertView* alert = [self alertViewWithTitle: NSLocalizedString(@"Error", nil) message:message];
++ (UIAlertView*)alertViewWithTitle:(NSString*)title message:(NSString*)message {
+    return [self alertViewWithTitle:title message:message buttonName:NSLocalizedString(@"OK", nil)];
+}
+
+
++ (UIAlertView*)alertViewWithErrorMessage:(NSString*)message {
+	UIAlertView* alert = [self alertViewWithTitle:NSLocalizedString(@"Error", nil) 
+                                          message:message 
+                                       buttonName:NSLocalizedString(@"Dismiss", nil)];
 	return alert;
 }
 
 
-+ (UIAlertView*)alertViewWithMessage:(NSString*)message{
++ (UIAlertView*)alertViewWithMessage:(NSString*)message {
 	return [self alertViewWithTitle:nil message:message];
 }
 
