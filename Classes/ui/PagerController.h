@@ -6,9 +6,13 @@
 
 @class PagerController;
 
-@protocol PagerControllerDataSource
+@protocol PagerControllerDataSource<NSObject>
 - (NSUInteger)numberOfPagesInPager:(PagerController*)pager;
 - (UIView*)viewForPage:(NSUInteger)pageIndex inPager:(PagerController*)pager;
+
+@optional
+- (NSUInteger)startPageIndex;
+
 @end
 
 @protocol PagerControllerDelegate

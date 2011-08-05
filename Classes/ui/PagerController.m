@@ -124,7 +124,8 @@
         [pages addObject:[NSNull null]];
     }
 
-    [self switchToPage:MIN(currentPage, pages.count-1) animated:NO];
+    NSUInteger startIndex = [dataSource respondsToSelector:@selector(startPageIndex)] ? [dataSource startPageIndex] : currentPage;
+    [self switchToPage:fmax(0, fmin(startIndex, pages.count-1)) animated:NO];
 }
 
 
