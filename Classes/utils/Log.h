@@ -3,10 +3,10 @@
 //
 
 #ifdef DEBUG_LOG
-    // ## behavior before __VA_ARGS__ is described here http://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
-    #define DEBUG(f, ...) NSLog(f, ##__VA_ARGS__)
+    // behavior of ## before __VA_ARGS__ is described here http://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
+    #define SM_DEBUG(f, ...) NSLog(f, ##__VA_ARGS__)
 #else
-    #define DEBUG(f, ...) 
+    #define SM_DEBUG(f, ...) 
 #endif
 
 
