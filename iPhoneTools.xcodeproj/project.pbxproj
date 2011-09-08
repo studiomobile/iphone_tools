@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA747D9F0F9514B9006C5449 /* iPhoneTools_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* iPhoneTools_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		B48D6E3F1418E3AC00C2E853 /* UIDevice+Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = B48D6E3D1418E3AC00C2E853 /* UIDevice+Platform.h */; };
+		B48D6E401418E3AC00C2E853 /* UIDevice+Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = B48D6E3E1418E3AC00C2E853 /* UIDevice+Platform.m */; };
 		DA319BF4130E8D2900103EF6 /* CryptoProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319BCA130E8D2900103EF6 /* CryptoProvider.h */; };
 		DA319BF5130E8D2900103EF6 /* CryptoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DA319BCB130E8D2900103EF6 /* CryptoProvider.m */; };
 		DA319BF6130E8D2900103EF6 /* EncryptedFilePath.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319BCC130E8D2900103EF6 /* EncryptedFilePath.h */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		AA747D9E0F9514B9006C5449 /* iPhoneTools_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneTools_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B48D6E3D1418E3AC00C2E853 /* UIDevice+Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Platform.h"; sourceTree = "<group>"; };
+		B48D6E3E1418E3AC00C2E853 /* UIDevice+Platform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Platform.m"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libiPhoneTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiPhoneTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA319BCA130E8D2900103EF6 /* CryptoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoProvider.h; sourceTree = "<group>"; };
 		DA319BCB130E8D2900103EF6 /* CryptoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoProvider.m; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				DA319BEE130E8D2900103EF6 /* UIView+NIB.m */,
 				DA319BEF130E8D2900103EF6 /* UIWebView+Utils.h */,
 				DA319BF0130E8D2900103EF6 /* UIWebView+Utils.m */,
+				B48D6E3D1418E3AC00C2E853 /* UIDevice+Platform.h */,
+				B48D6E3E1418E3AC00C2E853 /* UIDevice+Platform.m */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				DA319C28130E8D4200103EF6 /* unzip.h in Headers */,
 				DA319C2A130E8D4200103EF6 /* zip.h in Headers */,
 				DA799A561365A4AC005DE5D1 /* NSObject+AssociatedObjects.h in Headers */,
+				B48D6E3F1418E3AC00C2E853 /* UIDevice+Platform.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +378,7 @@
 				DA319C27130E8D4200103EF6 /* unzip.c in Sources */,
 				DA319C29130E8D4200103EF6 /* zip.c in Sources */,
 				DA799A571365A4AC005DE5D1 /* NSObject+AssociatedObjects.m in Sources */,
+				B48D6E401418E3AC00C2E853 /* UIDevice+Platform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
