@@ -5,6 +5,8 @@
 #define ENCODEOBJECT(obj) [coder encodeObject:obj forKey:@#obj]
 #define ENCODEOBJECTWITHCODER(obj, coder) [coder encodeObject:obj forKey:@#obj]
 
+#define DECODEOBJECTARC(obj) obj = [decoder decodeObjectForKey:@#obj]
+
 #define DECODEOBJECT(obj) obj = [[decoder decodeObjectForKey:@#obj] retain]
 #define DECODEOBJECTWITHCODER(obj, decoder) obj = [[decoder decodeObjectForKey:@#obj] retain]
 
