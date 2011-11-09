@@ -17,6 +17,8 @@
 	return [NSData dataWithContentsOfFile:self.absolutePathString];
 }
 
+- (BOOL)copyData:(FilePath*)to {assert(FALSE); }
+
 - (void)writeData:(NSData*)data error:(NSError**)error {
 	NSString *filePath = self.absolutePathString;
 	[[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:error];

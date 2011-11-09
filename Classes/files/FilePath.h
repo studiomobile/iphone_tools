@@ -13,6 +13,7 @@
 - (FilePath*)pathByDeletingPathExtension;
 
 - (NSData*)readData;
+- (BOOL)copyData:(FilePath*)to;
 - (void)writeData:(NSData*)data error:(NSError**)error;
 
 @end;

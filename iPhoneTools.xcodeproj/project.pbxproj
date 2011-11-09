@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227DE1971469BE2800939363 /* ZippedFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DE1961469BE2800939363 /* ZippedFilePath.m */; };
 		AA747D9F0F9514B9006C5449 /* iPhoneTools_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* iPhoneTools_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		B48D6E3F1418E3AC00C2E853 /* UIDevice+Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = B48D6E3D1418E3AC00C2E853 /* UIDevice+Platform.h */; };
@@ -48,7 +49,6 @@
 		DA319C16130E8D2900103EF6 /* UIWebView+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319BEF130E8D2900103EF6 /* UIWebView+Utils.h */; };
 		DA319C17130E8D2900103EF6 /* UIWebView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DA319BF0130E8D2900103EF6 /* UIWebView+Utils.m */; };
 		DA319C18130E8D2900103EF6 /* ZippedFilePath.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319BF2130E8D2900103EF6 /* ZippedFilePath.h */; };
-		DA319C19130E8D2900103EF6 /* ZippedFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = DA319BF3130E8D2900103EF6 /* ZippedFilePath.m */; };
 		DA319C24130E8D4200103EF6 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319C1D130E8D4100103EF6 /* crypt.h */; };
 		DA319C25130E8D4200103EF6 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = DA319C1E130E8D4100103EF6 /* ioapi.c */; };
 		DA319C26130E8D4200103EF6 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = DA319C1F130E8D4100103EF6 /* ioapi.h */; };
@@ -61,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		227DE1961469BE2800939363 /* ZippedFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZippedFilePath.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* iPhoneTools_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneTools_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B48D6E3D1418E3AC00C2E853 /* UIDevice+Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Platform.h"; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		DA319BEF130E8D2900103EF6 /* UIWebView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Utils.h"; sourceTree = "<group>"; };
 		DA319BF0130E8D2900103EF6 /* UIWebView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Utils.m"; sourceTree = "<group>"; };
 		DA319BF2130E8D2900103EF6 /* ZippedFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZippedFilePath.h; sourceTree = "<group>"; };
-		DA319BF3130E8D2900103EF6 /* ZippedFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZippedFilePath.m; sourceTree = "<group>"; };
 		DA319C1D130E8D4100103EF6 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		DA319C1E130E8D4100103EF6 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		DA319C1F130E8D4100103EF6 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				DA319BF2130E8D2900103EF6 /* ZippedFilePath.h */,
-				DA319BF3130E8D2900103EF6 /* ZippedFilePath.m */,
+				227DE1961469BE2800939363 /* ZippedFilePath.m */,
 			);
 			path = zip;
 			sourceTree = "<group>";
@@ -373,12 +373,12 @@
 				DA319C13130E8D2900103EF6 /* UIView+Debug.m in Sources */,
 				DA319C15130E8D2900103EF6 /* UIView+NIB.m in Sources */,
 				DA319C17130E8D2900103EF6 /* UIWebView+Utils.m in Sources */,
-				DA319C19130E8D2900103EF6 /* ZippedFilePath.m in Sources */,
 				DA319C25130E8D4200103EF6 /* ioapi.c in Sources */,
 				DA319C27130E8D4200103EF6 /* unzip.c in Sources */,
 				DA319C29130E8D4200103EF6 /* zip.c in Sources */,
 				DA799A571365A4AC005DE5D1 /* NSObject+AssociatedObjects.m in Sources */,
 				B48D6E401418E3AC00C2E853 /* UIDevice+Platform.m in Sources */,
+				227DE1971469BE2800939363 /* ZippedFilePath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

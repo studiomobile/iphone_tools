@@ -12,6 +12,7 @@
 @synthesize archivePath;
 @synthesize pathInArchive;
 
+typedef void (^ZipReadHandler)(char *buffer, int length);
 
 - (id)initWithArchivePath:(FilePath*)_archivePath pathInArchive:(NSString*)_pathInArchive {
 	if (![super init]) return nil;
@@ -70,10 +71,7 @@
 }
 
 
-- (NSData*)readData {
-	NSMutableData *data = (id)[self readCachedData];
-    if (data) return data;
-    
+- (BOOL)readData:(ZipReadHandler)block {
 	int error = UNZ_OK;
 	unzFile archive = NULL;
     unz_file_info fileInfo;
@@ -92,23 +90,61 @@
 		error = unzOpenCurrentFile(archive);
 		if (error != UNZ_OK) break;
         
-		int unzipped = 0;
-		data = [NSMutableData dataWithCapacity:fileInfo.uncompressed_size];
+		int unzipped;
 		do {
 			unzipped = unzReadCurrentFile(archive, buffer, sizeof(buffer));
-			if (unzipped < 0) { data = nil; break; }
-			[data appendBytes:buffer length:unzipped];
+            if (unzipped) {
+                block(buffer, unzipped);
+            }
 		}
 		while (unzipped > 0);
+        
+        if (unzipped < 0) {
+            error = UNZ_INTERNALERROR;
+        }
 	}
 	while (FALSE);
     
 	if (archive) {
 		error = unzCloseCurrentFile(archive);
-		error = unzClose(archive);
+        if (error == UNZ_OK) {
+            error = unzClose(archive);
+        }
 	}
     
-	return data;
+	return error == UNZ_OK;
+}
+
+
+- (NSData*)readData {
+	NSMutableData *data = (id)[self readCachedData];
+    if (data) return data;
+    
+    data = [NSMutableData data];
+    BOOL result = [self readData:^(char *buffer, int length) {
+        [data appendBytes:buffer length:(NSUInteger)length];
+    }];
+    
+    return result ? data : nil;
+}
+
+
+- (BOOL)copyData:(FilePath *)to {
+    NSString *filePath = [self.absolutePathString stringByDeletingLastPathComponent];
+   	[[NSFileManager defaultManager] createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    
+    FILE *output = fopen([[NSString stringWithFormat:@"%@/%@", filePath, to.absolutePathString] UTF8String], "w");
+    
+    if (output == NULL) return NO;
+    
+    BOOL result = [self readData:^(char *buffer, int length) {
+        fwrite(buffer, sizeof(char), length, output);
+    }];
+    
+    int err = fclose(output);
+    
+    return result && !err;
 }
 
 
