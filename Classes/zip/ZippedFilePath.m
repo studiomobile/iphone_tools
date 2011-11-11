@@ -130,11 +130,10 @@ typedef void (^ZipReadHandler)(char *buffer, int length);
 
 
 - (BOOL)copyData:(FilePath *)to {
-    NSString *filePath = [self.absolutePathString stringByDeletingLastPathComponent];
-   	[[NSFileManager defaultManager] createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+   	[[NSFileManager defaultManager] createDirectoryAtPath:[to.absolutePathString stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
     
     
-    FILE *output = fopen([[NSString stringWithFormat:@"%@/%@", filePath, to.absolutePathString] UTF8String], "w");
+    FILE *output = fopen([to.absolutePathString UTF8String], "w");
     
     if (output == NULL) return NO;
     
