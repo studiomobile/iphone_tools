@@ -12,7 +12,12 @@
 
 + (NSInteger)systemMajorVersion
 {
-    return [[UIDevice currentDevice].systemVersion integerValue];
+    static int systemMajorVersion = 0;
+    if (!systemMajorVersion) {
+        systemMajorVersion = [[UIDevice currentDevice].systemVersion integerValue];
+    }
+
+    return systemMajorVersion;
 }
 
 @end
