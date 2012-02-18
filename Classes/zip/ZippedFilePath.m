@@ -78,10 +78,10 @@ typedef void (^ZipReadHandler)(char *buffer, int length);
 	char buffer[4096];
     
 	do {
-		archive = unzOpen([archivePath.absolutePathString cStringUsingEncoding:NSASCIIStringEncoding]);
+		archive = unzOpen([archivePath.absolutePathString cStringUsingEncoding:NSUTF8StringEncoding]);
 		if (!archive) break;
         
-		error = unzLocateFile(archive, [pathInArchive cStringUsingEncoding:NSASCIIStringEncoding], 1);
+		error = unzLocateFile(archive, [pathInArchive cStringUsingEncoding:NSUTF8StringEncoding], 1);
 		if (error != UNZ_OK) break;
         
 		error = unzGetCurrentFileInfo(archive, &fileInfo, NULL, 0, NULL, 0, NULL, 0);
